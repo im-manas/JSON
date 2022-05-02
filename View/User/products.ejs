@@ -1,0 +1,35 @@
+<%-include('../Includes/header.ejs')%>
+</head>
+<body style="background-color: rgb(205, 205, 205);">
+  
+  <%-include('../Includes/navigation.ejs')%>
+    <br>
+    <%if(data.length>0){%>
+
+    <div class="container">
+        <div class="row">
+            <%for(let x of data){%>
+                <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Product name : <%=x.title%></h5>
+                            <h5 class="card-text">Price :  <%=x.price%> </h5>
+                            <h5 class="card-text">Descrption: <%=x.description%></h5>  
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+    </div>
+     <%}else{%>
+        <h1>Data Not Found</h1>
+    <%}%>
+
+
+
+
+
+
+    
+
+      <%-include('../Includes/footer.ejs')%>
